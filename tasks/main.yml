@@ -1,0 +1,15 @@
+---
+
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
+    update_cache: yes
+  become: true
+  when: ansible_os_family == 'Debian'
+
+- name: Update all packages to the latest version
+  yum:
+    name: '*'
+    state: latest
+  become: true
+  when: ansible_os_family == 'RedHat'
