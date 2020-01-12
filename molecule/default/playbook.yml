@@ -2,4 +2,4 @@
 - name: Converge
   hosts: all
   roles:
-    - role: ansible-role-connectivity-check
+    - role: ansible-role-system-update
