@@ -16,6 +16,7 @@ platforms:
       - /run/dbus/system_bus_socket:/run/dbus/system_bus_socket:ro  # for ntp/timedatectl
     privileged: true
     pre_build_image: true
+    
   - name: CentOS-8
     image: "geerlingguy/docker-centos8-ansible:latest"
     command: "/usr/lib/systemd/systemd"
@@ -47,6 +48,7 @@ platforms:
       - /run/dbus/system_bus_socket:/run/dbus/system_bus_socket:ro  # for ntp/timedatectl
     privileged: true
     pre_build_image: true
+
   - name: Ubuntu-18.04
     image: "geerlingguy/docker-ubuntu1804-ansible:latest"
     command: "/lib/systemd/systemd"
